@@ -1,0 +1,68 @@
+<body >
+    <div class="body-formulario fondo-oscuro">
+    <div class="formulario-container ">
+        <div><h1 class="titulo-form">Edita Superhéroe con Id: <%= id %></h1></div>
+        
+        <form id="formEditar">
+            <input type="hidden" name="id" value="<%= id %>">
+            
+            <div class="form-grupo">
+                <label for="nombreSuperheroe">Nombre del Superhéroe:</label>
+                <input type="text" id="nombreSuperheroe" name="nombreSuperheroe" 
+                       minlength="3" maxlength="60" required 
+                       value="<%= heroe.Nombre %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="nombreReal">Nombre Real:</label>
+                <input type="text" id="nombreReal" name="nombreReal" 
+                       minlength="3" maxlength="60" required 
+                       value="<%= heroe['Nombre Real'] %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" 
+                       min="0" required 
+                       value="<%= Number(heroe.edad) %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="planetaOrigen">Planeta de Origen:</label>
+                <input type="text" id="planetaOrigen" name="planetaOrigen" 
+                       value="<%= heroe['Planeta de Origen'] %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="debilidad">Debilidad:</label>
+                <input type="text" id="debilidad" name="debilidad" 
+                       value="<%= heroe.Debilidad %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="poderes">Poderes (separados por comas):</label>
+                <input type="text" id="poderes" name="poderes" 
+                       minlength="3" 
+                       value="<%= heroe.Poderes.join(', ') %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="aliados">Aliados (separados por comas):</label>
+                <input type="text" id="aliados" name="aliados" 
+                       value="<%= heroe.Aliados.join(', ') %>">
+            </div>
+            
+            <div class="form-grupo">
+                <label for="enemigos">Enemigos (separados por comas):</label>
+                <input type="text" id="enemigos" name="enemigos" 
+                       value="<%= heroe.Enemigos.join(', ') %>">
+            </div>
+            
+            <button type="submit" id="btnEditarSuperheroe" class="boton-editar">
+                Editar Superhéroe
+            </button>
+        </form>
+    </div>
+</div>
+    <script src="/js/editScripts.js"> </script>
+</body>
