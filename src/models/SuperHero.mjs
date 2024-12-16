@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 const superheroSchema = new mongoose.Schema({
-    creador: String,
+    creador: {type: String, default:'Alejandro Luna'},
     nombreSuperheroe: { type: String, required: true },
     nombreReal: { type: String, required: true },
     edad: { type: Number, min: 0 },
