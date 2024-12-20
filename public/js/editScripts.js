@@ -40,7 +40,8 @@ window.addEventListener("load", () => {
                 window.location.href = `/api/heroes`  //redirige al dashboard
             } else {
                 const error = await response.json();
-                alert('Error al editar el superhéroe: ' + error.message);
+                //alert('Error al editar el superhéroe: ' + error.message);
+                alert('Error al editar el superhéroe: ' + error.error[0].message);
             }
         } catch (error) {
             console.error('Error en la solicitud:', error);

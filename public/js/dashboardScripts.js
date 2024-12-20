@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
     const inputsButtonEditar = document.querySelectorAll('.button-editar');
     const inputsButtonEliminar = document.querySelectorAll('.button-eliminar');
-    const inputButtonAgregar = document.querySelector('.button-agregar');
+
 
     inputsButtonEditar.forEach(input => {
         input.addEventListener('click', () => {
@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
     //// boton Eliminar
     inputsButtonEliminar.forEach(input => {
 
-        input.addEventListener('click', () => {            
+        input.addEventListener('click', () => {
             const respuesta = confirm('esta seguro que quiere eliminar al superheroe')
             if (respuesta) {
                 let heroe = {}
@@ -47,8 +47,5 @@ window.addEventListener("load", () => {
             }
         })
     });
-    ////////// boton agregar
-    inputButtonAgregar.addEventListener('click', () => {
-        window.location.href = `heroes/agregar`
-    })
+
 })
