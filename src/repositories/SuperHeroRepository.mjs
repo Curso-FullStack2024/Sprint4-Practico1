@@ -12,7 +12,7 @@ class SuperHeroRepository extends IRepository {
     }
 
     async obtenerTodos() {
-        return await SuperHero.find({})
+        return await SuperHero.find({nombreSuperheroe:{ $exists: true } })
     }
 
     async buscarPorAtributo(atributo, valor) {

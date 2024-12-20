@@ -71,7 +71,6 @@ export async function borrarPorNombreController(req, res) {
 }
 
 
-
 // muestra el formulario de carga
 export async function agregarController(req, res) { 
     res.render('addSuperhero')
